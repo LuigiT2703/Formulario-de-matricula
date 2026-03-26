@@ -13,9 +13,12 @@ main{
   64 por 16, resultando em 4 */
   padding: 4rem;
 }
+
 main .main-container{
   max-width: 33rem;
   margin-left: auto;
+
+  
 }
 
 aside {
@@ -23,5 +26,36 @@ aside {
   padding: 4rem;
 }
 aside .aside-container{
+  /* width e a largura */
   max-width: 31rem;
+
+  & > img{
+    /* margin top espaca pra cima, bottom e pra baixo */
+    margin-top: 2rem;
+  }
+}
+
+.aside-container span{
+  color: var(--text-highlights);
+ 
+}
+
+.back{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+
+}
+
+
+h1{
+  /* 600 deixa ela semibold */
+  font: 600 1.5rem/1.25 var(--font-family);
+  margin-bottom: .5rem;
+}
+
+h2{
+  font: 600 2.5rem/1.25 var(--font-family);
+  margin-bottom: 0.5rem;
 }
