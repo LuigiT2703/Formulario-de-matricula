@@ -1,26 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de matrícula</title>
   <link rel="stylesheet" href="styles/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Maven+Pro:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Maven+Pro:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
 </head>
+
 <body>
   <div id="app">
     <main>
       <div class="main-container">
         <div class="back">
-        <img src="./assets/icons/arrow-left-02.svg" alt="Voltar">
-        <span>Voltar</span>
+          <img src="./assets/icons/arrow-left-02.svg" alt="Voltar">
+          <span>Voltar</span>
+        </div>
+        <h1>Formulário De Matrícula</h1>
+        <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+        <!-- method post é a forma q ele sera enviado, enctype deve ser usado em todos os formularios
+         que tiver algo para enviar -->
+        <form method="post" enctype="multipart/form-data">
+          <fieldset>
+            <legend>Informações da criança</legend>
+            <div class="input-wrapper">
+              <!-- o "for" do label interliga ele com um id -->
+              <label for="fullname">Nome completo</label>
+              <input id="fullname" name="fullname" type="text" placeholder="Coloque o nome da criança">
+            </div>
+            <div class="input-wrapper">
+              <label for="birthday">Data de nascimento</label>
+              <!-- o lang nesse input serve para ele formatar a data de aniversario
+               em portugues -->
+              <input type="date" id="birthday" name="birthday" lang="pt-BR">
+            </div>
+            <div class="select-wrapper">
+              <label for="gender">Sexo</label>
+              <select name="gender" id="">
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="indefinido">Prefiro não dizer</option>
+              </select>
+            </div>
+            <div class="textarea-wrapper">
+              <label for="medical-info">Informações médicas</label>
+              <textarea name="medical-info" id="medical-info" placeholder="A criança tem algum tipo de cuidados que precisam ser tomados? (se sim preencher o campo)" cols="30" rows="10"></textarea>
+            </div>
+            <div class="droperarea-wrapper">
+              <input type="file" name="birth-file" accept="birth-file">
+              <img src="assets/icons/cloud-upload.svg" alt="Simbolo de carregamento">
+              <p>
+                Clique aqui para <br>
+                selecionar arquivos
+              </p>
+            </div>
+          </fieldset>
+        </form>
       </div>
-      <h1>Formulário De Matrícula</h1>
-      <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p> 
-       
     </main>
     <aside>
       <div class="aside-container">
@@ -33,6 +75,7 @@
       </div>
     </aside>
   </div>
-  
+
 </body>
+
 </html>
