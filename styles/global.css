@@ -16,14 +16,15 @@
 
   --surface-primary:#FFFFFF;
   --surface-secondary:#FEE7D6;
-
+  --surface-disabled:#E7E5E4;
+  
   --stroke-default:#D6D3D1;
   --stroke-highlight:#F3541C;
   --semantic-error:#DC2626;
   
 }
 
-body{
+body {
   /* overflow hidden é para não ter a barra de rolagem ao lado */
   overflow: hidden;
 
@@ -31,13 +32,25 @@ body{
   color: var(--text-secondary);
 }
 
-h1,h2{ 
+h1,h2 { 
   color: var(--text-primary)
   
 }
 
-img{
+img {
   /* bom deixar setado ja antes */
   max-width: 100%;
   height: auto;
+}
+/* função para o flex nas partes de endereço residencial */
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1
+}
+
+.flex-2 {
+  flex: 2
 }

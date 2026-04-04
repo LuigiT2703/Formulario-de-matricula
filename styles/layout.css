@@ -1,4 +1,4 @@
-#app{
+#app {
   display: grid;
   /* Grid template colums deixa em forma de coluna */
   grid-template-columns: 51.25% 48.75%;
@@ -7,14 +7,14 @@
   overflow: hidden;
 }
 
-main{
+main {
   overflow: auto;
   /* nesse caso o padding da pagina era 64, e o rem foi calculado na divisao do
   64 por 16, resultando em 4 */
   padding: 4rem;
 }
 
-main .main-container{
+main .main-container {
   max-width: 33rem;
   margin-left: auto;
 
@@ -25,22 +25,22 @@ aside {
   background-color: var(--surface-secondary);
   padding: 4rem;
 }
-aside .aside-container{
+aside .aside-container {
   /* width e a largura */
   max-width: 31rem;
 
-  & > img{
+  & > img {
     /* margin top espaca pra cima, bottom e pra baixo */
     margin-top: 2rem;
   }
 }
 
-.aside-container span{
+.aside-container span {
   color: var(--text-highlights);
  
 }
 
-.back{
+.back {
   display: flex;
   align-items: center;
   gap: .5rem;
@@ -49,13 +49,14 @@ aside .aside-container{
 }
 
 
-h1{
+h1 {
   /* 600 deixa ela semibold */
   font: 600 1.5rem/1.25 var(--font-family);
   margin-bottom: .5rem;
 }
 
-h2{
+h2 {
   font: 600 2.5rem/1.25 var(--font-family);
   margin-bottom: 0.5rem;
 }
+
