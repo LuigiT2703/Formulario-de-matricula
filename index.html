@@ -103,6 +103,28 @@
             </div>
             
           </fieldset>
+          <fieldset class="gardian">
+            <legend>Informações do responsável</legend>
+            <div class="input-wrapper">
+              <label for="gardian">Nome do responsável</label>
+              <input type="text" id="gardian" name="gardian">
+              <small>Principal responsável legal e contato de emergência</small>
+            </div>
+            <div class="input-wrapper">
+              <label for="telefone">Telefone</label>
+              <!-- placeholder da a "dica" do que temos que escrever no campo -->
+              <input type="text" name="telefone" id="telefone" placeholder="(10) 9 8765-4321">
+            </div>
+            <div class="input-wrapper">
+              <label for="email">E-mail</label>
+              <!-- required significa que o campo é obrigatorio -->
+              <input type="email" name="email" id="email" required >
+              <div class="error">
+                <img src="assets/icons/alert-circle.svg" alt="logo de inválido">
+                <span>Insira um email válido</span>
+              </div>
+            </div>
+          </fieldset>
         </form>
       </div>
     </main>
