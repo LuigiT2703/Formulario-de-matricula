@@ -1,7 +1,9 @@
 .dropzone{
   /* aqui eu setei a borda da certidão de nascimento, e o dashed
   é para deixar a borda em traçados */
-  border: 1px dashed var(--stroke-default);
+  border: 2px dashed transparent;
+  outline: 1px dashed var(--stroke-default);
+  /* border substituido por outline tambem */
   border-radius: .5rem;
 
   display: grid;
@@ -24,8 +26,9 @@
     color:#A8A29E;
   }
 
-  &:hover, &:has(input:focus){
-    border-width: 2px;
+  &:hover, &:has(input:focus) {
+    outline-width: 0;
+    /* border-width: 2px; */
     border-color: var(--stroke-highlight);
     background-color: var(--surface-secondary);
 
