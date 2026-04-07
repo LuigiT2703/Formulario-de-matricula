@@ -1,0 +1,41 @@
+.terms-wrapper {
+  margin: 3rem;
+  display: flex;
+  gap: .75rem;
+
+  & strong {
+    font-weight: 500;
+    color: var(--stroke-highlight);
+  }
+}
+
+.checkbox-wrapper {
+  position: relative;
+
+  & [type="checkbox"] {
+    /* esse comando faz sumir o quadrado de marcacao proprio do type checkbox */
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  .checkbox-image {
+    flex: 0 0 0;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    background-image: url(../../assets/icons/checkbox-1.svg);
+  }
+
+  &:hover, &:focus-within {
+    .checkbox-image {
+    background-image: url(../../assets/icons/checkbox-2.svg);
+    }
+  }
+
+  &:has(:checked) {
+    .checkbox-image {
+    background-image: url(../../assets/icons/checkbox-3.svg);
+    }
+  }
+}
